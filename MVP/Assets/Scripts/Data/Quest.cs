@@ -28,15 +28,10 @@ public class Quest : ScriptableObject
          goals = new List<Goal>();
     }
 
-    /// <summary>
-    /// Marks the quest as complete and returns the xp points to award the player.
-    /// </summary>
-    /// <returns></returns>
-    public int CompleteQuest()
+    public void CompleteQuest()
     {
         this.isQuestComplete = true;
        
-        return xpReward;
     }
 
     public void AdvanceQuest()
