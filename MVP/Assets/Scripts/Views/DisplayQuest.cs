@@ -21,8 +21,6 @@ public class DisplayQuest : MonoBehaviour
 
         xpText.text = quest.xpReward.ToString();
 
-        activeGoalText.text = quest.activeGoal.goalDescription;
-       
-
+        activeGoalText.text = quest.activeGoal.goalDescription;     
     }
 }

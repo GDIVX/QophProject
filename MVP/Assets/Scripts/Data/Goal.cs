@@ -10,6 +10,13 @@ public class Goal : MonoBehaviour
 
     bool isGoalDone = false;
 
+
+    public Goal(int id, string description)
+    {
+        this.id = id;
+        goalDescription = description;
+    }
+
     public void CompleteGoal()
     {
         isGoalDone = true;

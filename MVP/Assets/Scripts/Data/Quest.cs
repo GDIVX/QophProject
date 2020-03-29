@@ -14,30 +14,27 @@ public class Quest : ScriptableObject
 
     public List<Goal> goals;
 
-   public Goal activeGoal;
+    public Goal activeGoal;
 
     public int xpReward;
 
-     bool isQuestComplete = false;
-    public Quest(int id,string title, string description, int xp)
+    bool isQuestComplete = false;
+
+
+    public Quest(int id, string title, string description, int xp)
     {
         this.id = id;
         this.questTitle = title;
         this.questDescription = description;
         this.xpReward = xp;
-         goals = new List<Goal>();
-    }
 
-    public void CompleteQuest()
-    {
-        this.isQuestComplete = true;
-       
+        goals = new List<Goal>();
     }
 
     public void AdvanceQuest()
     {
         activeGoal.CompleteGoal();
-        if(goals.Count>activeGoal.id+1)
+        if (goals.Count > activeGoal.id + 1)
         {
             activeGoal = goals[activeGoal.id + 1];
         }
@@ -47,6 +44,9 @@ public class Quest : ScriptableObject
         }
     }
 
-
+    public void CompleteQuest()
+    {
+        this.isQuestComplete = true;
+    }
 
 }
