@@ -9,16 +9,22 @@ public class GoalKill : Goal
     public string description => goalDescription;
 
     public bool isCompleted => isValid;
+
+    public bool isTargetKilled;
+    
     public GoalKill(int id, string description)
     {
         this.id = id;
 
         this.goalDescription = description;
     }
-    
-    public void CompleteGoal()
+
+    protected override void Evaluate()
     {
-        isValid = true;
-       
+        if(isTargetKilled)
+        {
+            isValid = true;
+            //TODO: complete quest and add xp to player.
+        }
     }
 }

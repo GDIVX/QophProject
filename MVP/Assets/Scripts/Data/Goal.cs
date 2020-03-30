@@ -14,11 +14,11 @@ public abstract class Goal
    protected bool isValid = true ;
 
 
-    
+   protected virtual void Evaluate()
+    {
+        isValid = true;
+    }
 
-    //public void CompleteGoal()
-    //{
-    //    isGoalDone = true;
-    //}
+  
    
 }
