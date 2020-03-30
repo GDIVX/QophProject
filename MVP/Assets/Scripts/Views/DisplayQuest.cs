@@ -12,7 +12,7 @@ public class DisplayQuest : MonoBehaviour
 
     public Text xpText;
 
-    public Text activeGoalText;
+    public Text goalText;
 
     private void Start()
     {
@@ -21,6 +21,6 @@ public class DisplayQuest : MonoBehaviour
 
         xpText.text = quest.xpReward.ToString();
 
-        activeGoalText.text = quest.activeGoal.goalDescription;     
+        goalText.text = quest.goal.goalDescription;     
     }
 }

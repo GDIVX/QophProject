@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal : MonoBehaviour
+[System.Serializable]
+[CreateAssetMenu(fileName = "New Goal", menuName = "Goal", order = 2)]
+
+public abstract class Goal  
 {
     public int id;
 
     public string goalDescription;
 
-    bool isGoalDone = false;
+   protected bool isValid = true ;
 
 
-    public Goal(int id, string description)
-    {
-        this.id = id;
-        goalDescription = description;
-    }
+    
 
-    public void CompleteGoal()
-    {
-        isGoalDone = true;
-    }
+    //public void CompleteGoal()
+    //{
+    //    isGoalDone = true;
+    //}
    
 }
