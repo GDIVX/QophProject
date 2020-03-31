@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "New Goal", menuName = "Goal", order = 2)]
 
-public abstract class Goal  
+public abstract class Goal:ScriptableObject
 {
     public int id;
 

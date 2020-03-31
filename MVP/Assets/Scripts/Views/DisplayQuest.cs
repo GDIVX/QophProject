@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class DisplayQuest : MonoBehaviour
+public class DisplayQuest
 {
+    
     public Quest quest;
 
     public Text titleText;

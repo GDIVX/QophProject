@@ -9375,7 +9375,6 @@ GameObject:
   - component: {fileID: 642140238}
   - component: {fileID: 642140237}
   - component: {fileID: 642140236}
-  - component: {fileID: 642140239}
   m_Layer: 5
   m_Name: Adventurer's Handbook
   m_TagString: Adventurer's HandBook
@@ -9471,23 +9470,6 @@ MonoBehaviour:
   physicalDamage: {fileID: 0}
   magicalDamage: {fileID: 0}
   illustration: {fileID: 0}
---- !u!114 &642140239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642140234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da94a213e5b3db74d917d262944d8eb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: b335b7ec6234cf543af51bb7b3b5b775, type: 2}
-  titleText: {fileID: 1128543886}
-  descriptionText: {fileID: 1165903130}
-  xpText: {fileID: 913269573}
-  goalText: {fileID: 0}
 --- !u!1 &643237080
 GameObject:
   m_ObjectHideFlags: 0
@@ -25374,7 +25356,6 @@ GameObject:
   - component: {fileID: 1810092225}
   - component: {fileID: 1810092230}
   - component: {fileID: 1810092229}
-  - component: {fileID: 1810092228}
   - component: {fileID: 1810092227}
   - component: {fileID: 1810092226}
   - component: {fileID: 1810092231}
@@ -25394,7 +25375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810092224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 598784586}
@@ -25425,18 +25406,6 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1810092228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810092224}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!81 &1810092229
@@ -29446,7 +29415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128149547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 0, z: -3.14}
+  m_LocalPosition: {x: 0.12, y: 0.06, z: -3.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 653613073}

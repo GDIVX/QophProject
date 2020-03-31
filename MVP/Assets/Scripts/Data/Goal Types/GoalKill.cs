@@ -1,6 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+
+
+[CreateAssetMenu(fileName = "Goal - Kill", menuName = "Goal/KIll Enemy", order = 1)]
 
 public class GoalKill : Goal
 {
@@ -9,6 +11,8 @@ public class GoalKill : Goal
     public string description => goalDescription;
 
     public bool isCompleted => isValid;
+
+    public GameObject target;
 
     public bool isTargetKilled;
     
@@ -24,6 +28,7 @@ public class GoalKill : Goal
         if(isTargetKilled)
         {
             isValid = true;
+            Debug.Log("Target Killed");
             //TODO: complete quest and add xp to player.
         }
     }
