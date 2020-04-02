@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class DisplayQuest
+public class DisplayQuest:MonoBehaviour
 {
     
     public Quest quest;
@@ -20,7 +20,7 @@ public class DisplayQuest
         titleText.text = quest.questTitle;
         descriptionText.text = quest.questDescription;
 
-        xpText.text = quest.xpReward.ToString();
+        xpText.text = "Reward: " +quest.xpReward.ToString() + " XP";
 
         goalText.text = quest.goal.goalDescription;     
     }

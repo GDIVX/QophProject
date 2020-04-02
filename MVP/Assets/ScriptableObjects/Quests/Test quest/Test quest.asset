@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226f379f21773c7459e555af97c39f46, type: 3}
   m_Name: Test quest
   m_EditorClassIdentifier: 
-  questTitle: 
-  questDescription: Test
-  xpReward: 200
+  questTitle: The Test Quest
+  questDescription: This is the quest to test the quest mechanic in the game. It
+    is made to be to ultimate testing quest and therefore it was the first ever quest
+    created for this game.
+  goal: {fileID: 11400000, guid: 4ca35dd035e781449bdc572c7adaae01, type: 2}
+  xpReward: 2500

@@ -7,7 +7,7 @@ TagManager:
   - PushAble
   - Adventurer's HandBook
   - Ground
-  - Quest name
+  - Quest
   layers:
   - Default
   - TransparentFX
