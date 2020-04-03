@@ -1,4 +1,4 @@
-﻿
+﻿using Photon.Realtime;
 using UnityEngine;
 
 
@@ -12,7 +12,9 @@ public class GoalCapture : Goal
 
     public bool isCompleted => isValid;
 
-    public GameObject locationToCapture; 
+    public Collider locationToCapture;
+
+    Player player;
 
     public GoalCapture(int id, string description)
     {
@@ -23,10 +25,13 @@ public class GoalCapture : Goal
 
     }
 
-    public void LocationCaptured()
+    public override void Evaluate()
     {
-        isValid = true;
-        Debug.Log("Location Captured!");
+        if (Camera.main.transform.position == locationToCapture.ClosestPoint(locationToCapture.transform.position))
+        {
+            isValid = true;
+            Debug.Log("Location Captured!");
+        }
         //TODO: complete quest and add xp to player.
     }
 

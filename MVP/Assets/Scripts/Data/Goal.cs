@@ -10,14 +10,20 @@ public abstract class Goal:ScriptableObject
 
     public string goalDescription;
 
-   protected bool isValid = true ;
+
+   protected bool isValid = false ;
 
 
-   protected virtual void Evaluate()
+   public virtual void Evaluate()
     {
         isValid = true;
     }
 
-  
+  public bool GetGoalValidity()
+    {
+        return isValid;
+    }
+
+    
    
 }

@@ -23,12 +23,23 @@ public class GoalDeliverItem : Goal
         deliveryDestination = destination;
     }
 
-    protected override void Evaluate()
+    public override void Evaluate()
     {
         if(itemToDeliver.transform.position == deliveryDestination.transform.position)
         {
             isValid = true;
             Debug.Log("Item delivered");
+
         }
+        else
+        {
+            if(itemToDeliver==null || itemToDeliver.activeSelf == false)
+            {
+                isValid = false;
+                Debug.Log("Quest Failed");
+            }
+
+        }
+
     }
 }

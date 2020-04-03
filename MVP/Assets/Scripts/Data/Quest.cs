@@ -41,9 +41,16 @@ public class Quest : ScriptableObject
     //    }
     //}
 
-    public void CompleteQuest()
+    public void QuestCallback()
     {
-        this.isQuestComplete = true;
+        if (goal.GetGoalValidity())
+        {
+            GameTracker.instance.OnQuestComplete_CallBack(this);
+        }
+        else
+        {
+            GameTracker.instance.OnQuestIncompletable_callBack(this);
+        }
     }
 
 }

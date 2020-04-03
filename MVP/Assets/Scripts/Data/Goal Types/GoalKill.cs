@@ -23,7 +23,7 @@ public class GoalKill : Goal
         this.goalDescription = description;
     }
 
-    protected override void Evaluate()
+    public override void Evaluate()
     {
         if(isTargetKilled)
         {
@@ -31,5 +31,6 @@ public class GoalKill : Goal
             Debug.Log("Target Killed");
             //TODO: complete quest and add xp to player.
         }
+
     }
 }
