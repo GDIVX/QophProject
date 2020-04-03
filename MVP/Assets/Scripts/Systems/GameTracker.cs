@@ -11,25 +11,32 @@ public class GameTracker : MonoBehaviour
     public int teamsAmmount;
     public float waitToEndTimer;
     public Team[] teams;
+    public Quest activeQuest;
 
     int SpaceInTeams = 1;
 
     public Action<Team> OnWin_CallBack;
     public Action<Team> OnLoose_CallBack;
-    
+
+    public Action<Quest> OnQuestComplete_CallBack;
+    public Action<Quest> OnQuestIncompletable_callBack;
 
     GameObject[] players;
 
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
         CreateTeams();
     }
 
+    private void Update()
+    {
+        activeQuest.QuestCallback();
+    }
     private void CreateTeams()
     {
         teams = new Team[teamsAmmount];
@@ -42,7 +49,8 @@ public class GameTracker : MonoBehaviour
 
     public void Win(Team team)
     {
-        if(!isGameInSession){
+        if (!isGameInSession)
+        {
             return;
         }
         isGameInSession = false;
@@ -56,9 +64,12 @@ public class GameTracker : MonoBehaviour
         if (OnWin_CallBack != null)
         {
             OnWin_CallBack(team);
-            if(OnLoose_CallBack != null){
-                foreach(Team t in teams){
-                    if(t == team){
+            if (OnLoose_CallBack != null)
+            {
+                foreach (Team t in teams)
+                {
+                    if (t == team)
+                    {
                         continue;
                     }
                     OnLoose_CallBack(t);
@@ -67,6 +78,25 @@ public class GameTracker : MonoBehaviour
         }
     }
 
+
+    public void CompleteQuest(Quest quest, Team team)
+    {
+        if (quest.goal.GetGoalValidity())
+        {
+            if (OnQuestComplete_CallBack != null)
+            {
+                OnQuestComplete_CallBack(quest);
+                Win(team);
+            }
+        }
+        else
+        {
+            if (OnQuestIncompletable_callBack != null)
+            {
+                OnQuestIncompletable_callBack(quest);
+            }
+        }
+    }
 
     public bool CanJoinTeam(Team team)
     {
