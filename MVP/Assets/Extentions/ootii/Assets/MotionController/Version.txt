@@ -1,3 +1,0 @@
-Motion Controller
-Version 2.805
-Jan 4, 2020

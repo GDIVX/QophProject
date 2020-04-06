@@ -56,9 +56,10 @@ public class SessionMannager : MonoBehaviourPunCallbacks
         }
 
         Debug.Log("Founded a prefab to the player. Spawning");
-        PhotonNetwork.Instantiate(this.PlayerAvatarPrefab.name,
-           SessionSetUp.instance.spawnPoints[Random.Range(0, SessionSetUp.instance.spawnPoints.Length)].position,
-            Quaternion.identity);
+        //PhotonNetwork.Instantiate(this.PlayerAvatarPrefab.name,
+        //   SessionSetUp.instance.spawnPoints[Random.Range(0, SessionSetUp.instance.spawnPoints.Length)].position,
+        //    Quaternion.identity);
+        Debug.LogError("Not Impleamented");
     }
 
 }
